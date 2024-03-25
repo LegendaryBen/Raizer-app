@@ -2,13 +2,15 @@ import {View,Text,StyleSheet,TouchableOpacity} from "react-native"
 
 
 
-const Login5 = ()=>{
+const Sign_up6 = ()=>{
     return(
+
             <View style={styles.container}>
                 <TouchableOpacity>
                     <Text style={styles.text}>Forgot password?</Text>
                 </TouchableOpacity>
             </View>
+        
     )
 }
 
@@ -17,7 +19,8 @@ const Login5 = ()=>{
 const styles = StyleSheet.create({
     container:{
         paddingHorizontal:20,
-        marginTop:20
+        marginTop:20,
+        width:"auto"
     },
     text:{
         color:"#4F4F4F",
@@ -29,4 +32,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default Login5;
+export default Sign_up6;

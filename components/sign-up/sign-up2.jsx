@@ -1,10 +1,10 @@
-import {Text,StyleSheet,View} from "react-native";
+import {Text,ScrollView,StyleSheet,View} from "react-native";
 
-const Login1 = ()=>{
+const Sign_up2 = ()=>{
 
     return (
         <View style={styles.textBox}>
-            <Text style={styles.text}>Log In</Text>
+            <Text style={styles.text}>Sign  Up</Text>
         </View>
     )
 
@@ -23,10 +23,10 @@ const styles = StyleSheet.create({
         color:"black"
     },
     textBox:{
-        marginTop:70,
+        marginTop:30,
         paddingHorizontal:20
     }
 })
 
 
-export default Login1
+export default Sign_up2
