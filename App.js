@@ -1,6 +1,6 @@
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
-import Sign_up from './screens/Sign-up';
+import Welcome from './screens/Welcome';
 
 export default function App() {
 
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-        <Sign_up/>
+      <Welcome/>
     </SafeAreaProvider>
   )
 }

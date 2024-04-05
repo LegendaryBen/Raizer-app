@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     container:{
         width:"100%",
         paddingHorizontal:20,
-        marginTop:70
+        marginTop:40
     },
     image:{
         height:24,
