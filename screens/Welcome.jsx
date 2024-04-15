@@ -1,9 +1,35 @@
-import {FlatList,View} from "react-native"
+import {FlatList,View,Alert} from "react-native"
 import Welcome1 from "../components/welcome/welcome1"
+import { useRef } from "react"
 
 
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
+  
+  const flatListRef = useRef(null)
+
+  const scrollToNextItem1 = () => {
+    if (flatListRef.current) {
+      flatListRef.current.scrollToIndex({
+        index: 1,
+        animated: true,
+      });
+    }
+  };
+
+  
+  const scrollToNextItem2 = () => {
+    if (flatListRef.current) {
+      flatListRef.current.scrollToIndex({
+        index: 2,
+        animated: true,
+      });
+    }
+  };
+
+  const login = ()=>{
+      navigation.navigate("Login")
+  }
 
 
     const DATA = [
@@ -14,7 +40,9 @@ const Welcome = () => {
           img:require('../assets/images/donation.png'),
           btn:'Next',
           skip:true,
-          pos:"F"
+          pos:"F",
+          func:scrollToNextItem1,
+          login
         },
         {
           id: 2,
@@ -23,7 +51,9 @@ const Welcome = () => {
           img:require('../assets/images/fundraising.png'),
           btn:'Next',
           skip:true,
-          pos:"S"
+          pos:"S",
+          func:scrollToNextItem2,
+          login
         },
         {
           id: 3,
@@ -32,7 +62,9 @@ const Welcome = () => {
           img:require('../assets/images/wallet.png'),
           btn:'Get Started',
           skip:false,
-          pos:"T"
+          pos:"T",
+          func:login,
+          login
         },
       ]
     
@@ -46,7 +78,7 @@ const Welcome = () => {
             pagingEnabled
             snapToAlignment="center"
             showsHorizontalScrollIndicator={false}
-
+            ref={flatListRef}
         />
   )
 }

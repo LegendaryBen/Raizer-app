@@ -1,12 +1,19 @@
 import { View,TouchableOpacity,Text,StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native"
+
+
 
 
 const Login7 = ()=>{
+
+    const navigation = useNavigation();
+
+
     return(
         <View style={styles.container}>
             <View style={styles.box}>
                 <Text style={styles.text}>Don’t have an account? </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("Sign-Up")}>
                     <Text style={styles.span}> Sign Up </Text>
                 </TouchableOpacity>
             </View>

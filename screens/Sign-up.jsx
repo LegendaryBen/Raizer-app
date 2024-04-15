@@ -14,7 +14,7 @@ import Sign_up8 from "../components/sign-up/sign-up8";
 const Sign_up = ()=>{
 
     return(
-        <Wrapper>
+        <Wrapper color="#F2F3FD">
             <ScrollView style={styles.container}>
                 <Sign_up1/>
                 <Sign_up2/>

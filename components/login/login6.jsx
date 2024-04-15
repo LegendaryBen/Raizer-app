@@ -3,6 +3,8 @@ import { View, StyleSheet,TouchableOpacity,Text } from "react-native"
 
 
 const Login6 = ()=>{
+
+
     return(
         <View style={styles.container}>
             <TouchableOpacity style={styles.click}>

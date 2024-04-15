@@ -1,11 +1,14 @@
 import { View,Image,StyleSheet,TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native"
 
 
 const Sign_up1 = ()=>{
+
+    const navigation = useNavigation()
+
     return(
         <View style={styles.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("Login")}>
                 <Image source={require('../../assets/images/back.png')} style={styles.image}/>
             </TouchableOpacity>
         </View>

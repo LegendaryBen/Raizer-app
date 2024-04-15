@@ -1,4 +1,4 @@
-import { ImageBackground,Image,Text,View,StyleSheet,useWindowDimensions,TouchableOpacity } from "react-native"
+import { ImageBackground,Image,Text,View,StyleSheet,useWindowDimensions,TouchableOpacity} from "react-native"
 import Wrapper from "../Wrapper"
 import Welcome2 from "./welcome2";
 
@@ -11,7 +11,7 @@ const Welcome1 = ({obj}) => {
         <ImageBackground source={require('../../assets/images/back.jpg')}>
             <View style={[{width,height}]}>
                 <View style={styles.skip}>
-                 {obj.skip &&<TouchableOpacity style={styles.skipbtn}>
+                 {obj.skip &&<TouchableOpacity style={styles.skipbtn} onPress={obj.login}>
                       <Text style={styles.text}>Skip</Text>
                       <Image source={require('../../assets/images/skip.png')}/>
                     </TouchableOpacity>}
@@ -26,7 +26,7 @@ const Welcome1 = ({obj}) => {
                       </View>
                     </View>
                     <View style={styles.btncontainer}>
-                        <TouchableOpacity style={styles.next}>
+                        <TouchableOpacity style={styles.next} onPress={obj.func}>
                             <Text style={styles.nxtbtn}>{obj.btn}</Text>
                         </TouchableOpacity>
                     </View>

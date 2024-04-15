@@ -1,6 +1,10 @@
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
-import Welcome from './screens/Welcome';
+import { NavigationContainer } from '@react-navigation/native';
+import Auth_Navigator from './Navigators/Auth_Navigator';
+import Profile_Navigator from './Navigators/Profile_Navigator';
+
+
 
 export default function App() {
 
@@ -13,7 +17,9 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-      <Welcome/>
+      <NavigationContainer>
+        <Profile_Navigator/>
+      </NavigationContainer>
     </SafeAreaProvider>
   )
 }
