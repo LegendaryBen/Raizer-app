@@ -4,6 +4,8 @@ import User_home1 from "../components/user-home/User_home1"
 import User_home2 from "../components/user-home/User_home2"
 import User_home3 from "../components/user-home/User_home3"
 import User_home4 from "../components/user-home/User_home4"
+import User_home5 from "../components/user-home/User_home5"
+import User_home6 from "../components/user-home/User_home6"
 
 
 
@@ -16,6 +18,8 @@ const User_home = () => {
           <User_home2/>
           <User_home3/>
           <User_home4/>
+          <User_home5/>
+          <User_home6/>
         </ScrollView>
     </Wrapper>
   )
