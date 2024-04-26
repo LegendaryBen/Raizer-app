@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import User_home from '../screens/User-home';
 import User_notification from '../screens/User-notification';
 import User_wallet from '../screens/User-wallet';
 import User_profile from '../screens/User-profile';
+import User_home_notification from '../screens/User-home-notification';
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
@@ -68,7 +68,7 @@ function Profile_Navigator() {
             backgroundColor:"#F2F3FD"
         }
       })}>
-      <Tab.Screen name="Home" component={User_home} />
+      <Tab.Screen name="Home" component={User_home_notification} />
       <Tab.Screen name="Notifications" component={User_notification} />
       <Tab.Screen name="Wallet" component={User_wallet} />
       <Tab.Screen name="Settings" component={User_profile} />
