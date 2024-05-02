@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
