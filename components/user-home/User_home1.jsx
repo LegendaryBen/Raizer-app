@@ -2,11 +2,14 @@ import { View,StyleSheet,Text,TouchableOpacity} from "react-native"
 import { Fontisto } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-
+import { useNavigation } from "@react-navigation/native";
 
 
 
 const User_home1 = () => {
+
+   const navigation = useNavigation()
+
   return (
     <View style={styles.container}>
         <View style={styles.avatat_block}>
@@ -14,17 +17,17 @@ const User_home1 = () => {
             <View><Text style={styles.raizer}>Raizer</Text></View>
         </View>
         <View style={styles.icon_box}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("user_notification")}>
               <View style={styles.icon_cont}>
                 <Fontisto name="bell" size={24} color="#121D82" />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("user_search")}>
               <View style={styles.icon_cont}>
                 <Ionicons name="search" size={24} color="#121D82" />
               </View>
             </TouchableOpacity>
-           <TouchableOpacity>
+           <TouchableOpacity onPress={()=>navigation.navigate("user_bookmark")}>
               <View style={styles.icon_cont}>
                 <MaterialIcons name="bookmark-outline" size={24} color="#121D82" />
               </View>
