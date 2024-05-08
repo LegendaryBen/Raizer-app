@@ -10,7 +10,7 @@ const User_home_bookmark = (props) => {
     return (
         <Wrapper color="#F2F3FD">
             <User_home_bookmar1/>
-            <User_home_bookmark2/>
+            <User_home_bookmark2 name="Bookmark"/>
             <User_home_bookmark3/>
             <User_home_bookmark4/>
         </Wrapper>

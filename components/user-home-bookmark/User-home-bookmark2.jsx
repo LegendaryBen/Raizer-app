@@ -2,11 +2,11 @@ import { View,TouchableOpacity,Text,StyleSheet } from "react-native"
 import { SimpleLineIcons } from '@expo/vector-icons';
 
 
-const User_home_bookmark2 = (props) => {
+const User_home_bookmark2 = ({name}) => {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.txt}>Bookmark</Text>
+                <Text style={styles.txt}>{name}</Text>
             </View>
             <TouchableOpacity style={styles.icon_box}>
                 <View style={styles.icon_box}>
