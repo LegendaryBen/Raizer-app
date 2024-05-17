@@ -3,8 +3,7 @@ import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import Auth_Navigator from './Navigators/Auth_Navigator';
-import Profile_Navigator from './Navigators/Profile_Navigator';
-
+import Donate_Navigator from './Navigators/Donate_Navigator';
 
 
 export default function App() {
@@ -19,7 +18,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Profile_Navigator/>
+        <Donate_Navigator/>
       </NavigationContainer>
     </SafeAreaProvider>
   )

@@ -9,7 +9,7 @@ import User_home_bookmark from '../screens/User-home-bookmark';
 
 const Stack = createNativeStackNavigator();
 
-function Profile_Navigator() {
+function Home_Navigator() {
   return (
     <Stack.Navigator screenOptions={{headerShown:false}}>
       <Stack.Screen name="user_home" component={User_home} />
@@ -20,4 +20,4 @@ function Profile_Navigator() {
   );
 }
 
-export default Profile_Navigator
+export default Home_Navigator

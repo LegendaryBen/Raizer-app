@@ -1,11 +1,17 @@
 import { View,Text,StyleSheet,TouchableOpacity } from "react-native"
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from "@react-navigation/native";
 
 
 const User_notification2 = ({logo,text}) => {
+
+    const navigation = useNavigation();
+
+
+
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.icon_box}>
+            <TouchableOpacity style={styles.icon_box} onPress={()=>navigation.navigate("Start_campaign")}>
                 <View style={styles.box}>
                     <View style={styles.icon}>
                         <AntDesign name={logo} size={24} color="#1928B3" />

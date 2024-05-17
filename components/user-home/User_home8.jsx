@@ -1,54 +1,56 @@
 import { View,StyleSheet,Text,TouchableOpacity,ImageBackground,Image,Platform } from "react-native"
 import { Feather } from '@expo/vector-icons';
 import { useState } from "react";
-
+import { useNavigation } from "@react-navigation/native";
 
 
 
 const User_home8 = () => {
 
     const[track , setTrack]= useState(false)
-
+    const navigation = useNavigation()
 
   return (
         <View style={styles.container}>
-            <View style={styles.card}>
-                <View style={styles.disp_cont}>
-                    <ImageBackground style={styles.disp} source={require('../../assets/images/tiktok.jpg')}>
-                        <TouchableOpacity onPress={()=>setTrack(!track)}>
-                            <View style={[styles.icon_cont,{backgroundColor:track?"#1928B3":"#E9EBFC"}]}>
-                                <Feather name="bookmark" size={20} color={`${track?"white":"#1928B3"}`} />
+            <TouchableOpacity onPress={()=>navigation.navigate("Donate")}>
+                <View style={styles.card}>
+                    <View style={styles.disp_cont}>
+                        <ImageBackground style={styles.disp} source={require('../../assets/images/tiktok.jpg')}>
+                            <TouchableOpacity onPress={()=>setTrack(!track)}>
+                                <View style={[styles.icon_cont,{backgroundColor:track?"#1928B3":"#E9EBFC"}]}>
+                                    <Feather name="bookmark" size={20} color={`${track?"white":"#1928B3"}`} />
+                                </View>
+                            </TouchableOpacity>
+                        </ImageBackground>
+                    </View>
+                    <View style={styles.avatar_box}>
+                            <View style={styles.avatar_container}>
+                                <Image source={require('../../assets/images/tiktok.jpg')} style={[styles.avatar,{zIndex:1}]}/>
+                                <Image source={require('../../assets/images/spotify.jpg')} style={[styles.avatar,{left:12,zIndex:2}]}/>
+                                <Image source={require('../../assets/images/twitter.jpg')} style={[styles.avatar,{left:24,zIndex:3}]}/>
                             </View>
-                        </TouchableOpacity>
-                    </ImageBackground>
-                </View>
-                <View style={styles.avatar_box}>
-                        <View style={styles.avatar_container}>
-                            <Image source={require('../../assets/images/tiktok.jpg')} style={[styles.avatar,{zIndex:1}]}/>
-                            <Image source={require('../../assets/images/spotify.jpg')} style={[styles.avatar,{left:12,zIndex:2}]}/>
-                            <Image source={require('../../assets/images/twitter.jpg')} style={[styles.avatar,{left:24,zIndex:3}]}/>
+                            <View style={styles.txt_box}>
+                                <Text numberOfLines={1} style={styles.txt}>767+ people donated</Text>
+                            </View>
+                    </View>
+                    <View style={styles.donated}>
+                        <Text style={styles.donated_txt} numberOfLines={1}>Donate to help build schools in mali</Text>
+                    </View>
+                    <View style={styles.loader_container}>
+                        <View style={styles.loader_box}>
+                            <View style={[styles.loader,{width:"50%"}]}></View>
                         </View>
-                        <View style={styles.txt_box}>
-                            <Text numberOfLines={1} style={styles.txt}>767+ people donated</Text>
+                    </View>
+                    <View style={styles.loader_signal}>
+                        <View style={{flexBasis:"70%",paddingRight:5}}>
+                            <Text numberOfLines={1} style={styles.signal_txt}>Raised</Text>
                         </View>
-                </View>
-                <View style={styles.donated}>
-                    <Text style={styles.donated_txt} numberOfLines={1}>Donate to help build schools in mali</Text>
-                </View>
-                <View style={styles.loader_container}>
-                    <View style={styles.loader_box}>
-                        <View style={[styles.loader,{width:"50%"}]}></View>
+                        <View>
+                            <Text style={styles.signal_txt}>21%</Text>
+                        </View>
                     </View>
                 </View>
-                <View style={styles.loader_signal}>
-                    <View style={{flexBasis:"70%",paddingRight:5}}>
-                        <Text numberOfLines={1} style={styles.signal_txt}>Raised</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.signal_txt}>21%</Text>
-                    </View>
-                </View>
-            </View>
+            </TouchableOpacity>
         </View>
   )
 }
