@@ -1,10 +1,12 @@
 import { View, Text,Image,TouchableOpacity,StyleSheet } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native'
 
 const User_wallet3 = () => {
 
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("Wallet-details")}>
         <View style={styles.img_cont}>
             <Image style={styles.img} source={require('../../assets/images/btc-logo.png')}/>
             <View style={styles.token_cont}>
@@ -53,7 +55,8 @@ const styles = StyleSheet.create({
         width:44,
         height:44,
         objectFit:"cover",
-        marginRight:10
+        marginRight:10,
+        borderRadius:50
     },
     img_cont:{
         flexDirection:"row",

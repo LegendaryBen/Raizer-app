@@ -2,11 +2,14 @@ import { StyleSheet, Text, View,Platform,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
-
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const User_wallet1 = () => {
+
+  const navigation = useNavigation()
+
   return (
     <>  
         <View style={styles.price_cont}>
@@ -32,12 +35,12 @@ const User_wallet1 = () => {
             </View>
             <View style={styles.donate_cont}>
                 <View style={styles.donate_box}>
-                    <TouchableOpacity style={[styles.donate,{borderRightColor:"#F2F2F380",borderRightWidth:1}]}>
+                    <TouchableOpacity style={[styles.donate,{borderRightColor:"#F2F2F380",borderRightWidth:1}]} onPress={()=>navigation.navigate("Home")}>
                         <Text style={styles.donte_txt}>
                             Donate
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity  style={styles.donate}>
+                    <TouchableOpacity  style={styles.donate} onPress={()=>navigation.navigate("Home")}>
                         <Text style={styles.donte_txt}>
                             Fundraise
                         </Text>

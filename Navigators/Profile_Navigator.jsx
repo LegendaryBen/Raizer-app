@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import User_wallet from '../screens/User-wallet';
+import Wallet_Navigator from './Wallet_navigator';
 import User_profile from '../screens/User-profile';
 import Home_Navigator from './Home_Navigator';
 import Campaign_Navigator from './Campaign_Navigator';
@@ -69,7 +69,7 @@ function Profile_Navigator() {
       })}>
       <Tab.Screen name="Home" component={Home_Navigator} />
       <Tab.Screen name="Notifications" component={Campaign_Navigator} />
-      <Tab.Screen name="Wallet" component={User_wallet} />
+      <Tab.Screen name="Wallet" component={Wallet_Navigator} />
       <Tab.Screen name="Settings" component={User_profile} />
     </Tab.Navigator>
   );
