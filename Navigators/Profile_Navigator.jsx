@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Wallet_Navigator from './Wallet_navigator';
 import User_profile from '../screens/User-profile';
 import Home_Navigator from './Home_Navigator';
 import Campaign_Navigator from './Campaign_Navigator';
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-
+import Wallet_Navigator from './Wallet_Navigator';
 
 
 const Tab = createBottomTabNavigator();
