@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native'
 
 const Donate10 = () => {
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-        <TouchableOpacity style={styles.txt_box}>
+        <TouchableOpacity style={styles.txt_box} onPress={()=>navigation.navigate("Proceed")}>
             <Text style={styles.txt}>Donate10</Text>
         </TouchableOpacity>
     </View>
@@ -28,7 +31,8 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         backgroundColor:"#1928B3",
-        borderRadius:30
+        borderRadius:30,
+        marginBottom:20
     },
     txt:{
         fontFamily:"archivo",
