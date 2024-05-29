@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View,FlatList,Image,TouchableOpacity } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native';
 
 const Proceed5 = () => {
+
+    const navigation = useNavigation();
 
     const DATA = [
         {
@@ -50,7 +52,7 @@ const Proceed5 = () => {
             renderItem={({item}) => {
 
                 return(
-                    <TouchableOpacity style={styles.coin_box}>
+                    <TouchableOpacity style={styles.coin_box} onPress={()=>navigation.navigate("Coin")}>
                         <View style={styles.coin_ctn}>
                             <Image style={styles.img} source={require('../../assets/images/btc-logo.png')}/>
                             <View style={styles.txt_box}>
@@ -80,6 +82,7 @@ const Proceed5 = () => {
                 }
             }
             keyExtractor={item => item.id}
+            showsVerticalScrollIndicator={false}
         />
     </View>
   )
