@@ -1,13 +1,13 @@
 import { View,StyleSheet,TextInput,Image,TouchableOpacity } from "react-native"
 
 
+const Login3 = ({val,func})=>{
 
-const Login3 = ()=>{
     return (
         <View style={[styles.container]}>
             <View style={styles.inputBox}>
-                <TextInput style={styles.input} placeholder="Email"/>
-                <TouchableOpacity>
+                <TextInput style={styles.input} placeholder="Email" value={val} onChangeText={func}/>
+                <TouchableOpacity onPress={()=>func('')}>
                     <Image source={require('../../assets/images/cancel.png')} style={styles.img}/>
                 </TouchableOpacity>
             </View>

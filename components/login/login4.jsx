@@ -1,13 +1,16 @@
 import { View,StyleSheet,TextInput,Image,TouchableOpacity } from "react-native"
+import { useState } from "react"
 
 
+const Login4= ({val,func})=>{
 
-const Login4= ()=>{
+    const[hide,setHide] = useState(false)
+
     return (
         <View style={[styles.container]}>
             <View style={styles.inputBox}>
-                <TextInput style={styles.input} placeholder="Login password"/>
-                <TouchableOpacity>
+                <TextInput style={styles.input} placeholder="Login password" value={val} onChangeText={func} secureTextEntry={hide}/>
+                <TouchableOpacity onPress={()=>setHide(!hide)}>
                     <Image source={require('../../assets/images/hidden.png')} style={styles.img}/>
                 </TouchableOpacity>
             </View>

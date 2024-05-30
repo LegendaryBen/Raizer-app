@@ -7,7 +7,7 @@ import Wrapper from "../components/Wrapper"
 const User_profile = () => {
   return (
     <Wrapper color="#F2F3FD">
-        <Text>Profile</Text>
+        <Text style={{fontFamily:"archivo"}}>Profile</Text>
     </Wrapper>
   )
 }

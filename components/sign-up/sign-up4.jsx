@@ -2,12 +2,12 @@ import { View,StyleSheet,TextInput,Image,TouchableOpacity } from "react-native"
 
 
 
-const Sign_up4 = ()=>{
+const Sign_up4 = ({val,func})=>{
     return (
         <View style={[styles.container]}>
             <View style={styles.inputBox}>
-                <TextInput style={styles.input} placeholder="Email"/>
-                <TouchableOpacity>
+                <TextInput style={styles.input} placeholder="Email"  value={val} onChangeText={func}/>
+                <TouchableOpacity onPress={()=>func('')}>
                     <Image source={require('../../assets/images/cancel.png')} style={styles.img}/>
                 </TouchableOpacity>
             </View>

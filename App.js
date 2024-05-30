@@ -1,27 +1,16 @@
 import 'react-native-gesture-handler';
-import { SafeAreaProvider} from 'react-native-safe-area-context';
-import { useFonts } from 'expo-font';
-import { NavigationContainer } from '@react-navigation/native';
-import Auth_Navigator from './Navigators/Auth_Navigator';
-import Donate_Navigator from './Navigators/Donate_Navigator';
+import Auth_context from './Context/Auth_context';
+import AppFace from './AppFace';
 
 
 export default function App() {
 
-  const [fontsLoaded] = useFonts({
-    'archivo': require('./assets/fonts/Archivo-VariableFont_wdth,wght.ttf')
-  });
-
-  if(!fontsLoaded) return null;
-
-
-  return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Donate_Navigator/>
-      </NavigationContainer>
-    </SafeAreaProvider>
+  return(
+    <Auth_context>
+      <AppFace/>  
+    </Auth_context>
   )
+
 }
 
 

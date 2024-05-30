@@ -2,12 +2,12 @@ import { View, StyleSheet,TouchableOpacity,Text } from "react-native"
 
 
 
-const Login6 = ()=>{
+const Login6 = ({submit})=>{
 
 
     return(
         <View style={styles.container}>
-            <TouchableOpacity style={styles.click}>
+            <TouchableOpacity style={styles.click} onPress={()=>submit()}>
                 <View style={styles.button}>
                     <Text style={styles.text}>Log In</Text>
                 </View>
