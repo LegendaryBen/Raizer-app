@@ -8,7 +8,7 @@ const Sign_up4 = ({val,func})=>{
             <View style={styles.inputBox}>
                 <TextInput style={styles.input} placeholder="Email"  value={val} onChangeText={func}/>
                 <TouchableOpacity onPress={()=>func('')}>
-                    <Image source={require('../../assets/images/cancel.png')} style={styles.img}/>
+                    <Image source={require('../../assets/images/cancel1.png')} style={styles.img}/>
                 </TouchableOpacity>
             </View>
         </View>

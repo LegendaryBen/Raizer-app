@@ -24,6 +24,7 @@ const AppFace = () => {
 
         const getData = async () => {
           try {
+
             let value = await AsyncStorage.getItem('key');
 
              value = JSON.parse(value);
@@ -71,8 +72,12 @@ const AppFace = () => {
             })
           }
         };
-    
-        getData()
+
+        setTimeout(()=>{
+
+          getData()
+
+        },3000)
     
       },[])
     

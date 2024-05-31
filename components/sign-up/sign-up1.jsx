@@ -9,7 +9,7 @@ const Sign_up1 = ()=>{
     return(
         <View style={styles.container}>
             <TouchableOpacity onPress={()=>navigation.navigate("Login")}>
-                <Image source={require('../../assets/images/back.png')} style={styles.image}/>
+                <Image source={require('../../assets/images/back1.png')} style={styles.image}/>
             </TouchableOpacity>
         </View>
     )

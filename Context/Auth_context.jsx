@@ -8,7 +8,7 @@ const Auth = createContext()
 const Auth_context = ({children}) => {
 
     const[login,setLogin] = useState({
-        loading:false,
+        loading:true,
         token:"",
         user:{
           email:null,

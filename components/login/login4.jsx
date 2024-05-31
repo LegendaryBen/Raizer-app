@@ -11,7 +11,7 @@ const Login4= ({val,func})=>{
             <View style={styles.inputBox}>
                 <TextInput style={styles.input} placeholder="Login password" value={val} onChangeText={func} secureTextEntry={hide}/>
                 <TouchableOpacity onPress={()=>setHide(!hide)}>
-                    <Image source={require('../../assets/images/hidden.png')} style={styles.img}/>
+                    <Image source={require('../../assets/images/hidden1.png')} style={styles.img}/>
                 </TouchableOpacity>
             </View>
         </View>

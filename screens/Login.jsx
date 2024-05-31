@@ -75,11 +75,11 @@ const Login = ({navigation})=>{
                                 }
                             })
                         }else{
-                            Alert.alert("User does not exit1")
+                            Alert.alert("User does not exit")
                         }
                     
                   }else{
-                        Alert.alert("User does not exit2")
+                        Alert.alert("User does not exit")
                   }
 
                 } catch (e) {
